@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios html</title>
+    <style>
+        #conteudo{
+            padding: 30px 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercícios HTML</h1>
+    </header>
+    <nav>
+        <a href="exercicios/test.html">00 - Teste</a> |
+        <a href="exercicios/texto1.html">01 - Texto 1</a>  |
+        <a href="exercicios/texto2.html">02 - Texto 2</a> |
+        <a href="exercicios/listas.html">03 - Listas</a> |
+        <a href="exercicios/listasAninhadas.html">04 - Listas Aninhadas</a> |
+        <a href="exercicios/links.html">05 - Links</a> |
+        <a href="exercicios/tabela.html">06 - Tabela</a> |
+        <a href="exercicios/form/form.html">07 - Formulário</a> |
+        <a href="exercicios/imagens.html">08 - Imagens</a> |
+        <a href="exercicios/video.html">09 - Video</a> 
+    </nav>
+    <section id="conteudo"></section>
+    <footer>       
+        Curso Web Moderno
+    </footer>
+    <script>
+        document.querySelectorAll('a').forEach(link =>{
+            link.onclick = function (e) {
+                e.preventDefault() 
+                const conteudo = document.getElementById('conteudo')
+                fetch(link.href)
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+</body>
+</html>
+<!-- e.preventDefault() previne o comportamento padrão que é
+    navegar para outro link-->
+<!-- o objetivo no script é pegar informações de outras páginas e joga-las
+na página principal através do click nos links-->
+<!-- usando getElementById você não precisa usar # para mostrar que é uma id
+pois ele já irá procurar cada id com o nome fornecido na busca-->
+<!-- o fetch faz uma chamada ajax para cada click (link).
+
+O then(resp => resp.text()) serve para pegar o conteúdo html da página 
+que foi feitaa requisição.
+
+O then(hmtl => conteudo.innerHtml = html) recebe o html requisitado e ira
+substituir o conteúdo da section que tem esse conteúdo-->
+
+<!-- Para fazer a requisição de html por um atributo criado por mim ao invés
+do href basta eu fazer
+
+<body>
+    <header>
+        <h1>Exercícios HTML</h1>
+    </header>
+    <nav>
+        <a href wm-nav="exercicios/teste.html">00 - Teste</a> |
+        <a href wm-nav="exercicios/temp.html">00 - TEMP!!</a>
+    </nav>
+    <section id="conteudo"></section>
+    <footer>
+        <br>
+        Curso Web Moderno
+    </footer>
+    <script>
+        document.querySelectorAll('[wm-nav]').forEach(link =>{
+            link.onclick = function (e) {
+                e.preventDefault() 
+                const conteudo = document.getElementById('conteudo')
+                fetch(link.getAttribute('wm-nav'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+</body>
+
+-->

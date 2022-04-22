@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Um pouco de CSS</title>
+        <link rel="stylesheet" href="umPoucodeCSS.css"> <!--referenciando
+        para um arquivo CSS externo para facilitar o código-->
+        <style>
+            h1 {            
+                font-size: 20px;                
+            }
+            .fundoVermelho {
+                background-color: red;
+            }
+            .negrito{
+                font-weight: bold;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>CSS</h1>
+        <span id="textoPrincipal">Texto1</span><br> <br>
+        <!--toda tag tem o parâmetro id que é um parâmetro único 
+        dentro da página inteira-->
+
+        <span class="fundoVermelho negrito">Texto2</span><br> <br>
+        <!-- aqui foram postos duas classes, sendo uma 'fundoVermelho'
+        e outra chamada 'negrito'--> 
+
+        <!--classe é um identificador muito associado com estilo para que se
+        possa aplicar uma determinada classe mais de uma vez dentro de uma 
+        mesma págima, inclusive da para marcar um mesmo elemento com mais de
+        uma classe-->
+        <span class="fundoVermelho">Texto3</span>
+    </body>
+</html>
+
+<!-- a tag <br> significa break point ou quebra de texto-->
+
+<!--OBS-->
+
+<!--No CSS, você deve colocar qual a tag a ser estilizada, depois qual
+elemento irá receber tal estilo, abrir chaves e lá dentro passar o estilo
+através de palavras chaves pré determinadas, seguido de ':', seguido de 
+outra palavra pré determinada e fechando com o ';'-->
+
+<!-- Para definir uma classe CSS, você irá escrever com '.' e depois o nome
+da classe, exemplo '.fundoVermelho'-->
+
+<!-- Para definir um id vocÊ deve usar o '#'-->

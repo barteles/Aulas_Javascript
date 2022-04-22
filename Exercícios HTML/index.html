@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Tabela do Brasileirão 2021</title>
+    <style>
+        #conteudo{
+            padding: 30px 0px;
+        }
+        #titulo{
+            padding: 10px ;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header id="titulo">Tabela do Brasileirão</header>
+    <nav>
+        <a href="tabelaBrasileiro.html">Tabela do Campeonato</a>
+    </nav>
+    <section id="conteudo"></section>
+
+    <footer>
+        Feito em 10/04/2022
+    </footer>
+
+    <script>
+        document.querySelectorAll('a').forEach(link =>{
+            link.onclick = function (e) {
+                e.preventDefault() 
+                const conteudo = document.getElementById('conteudo')
+                fetch(link.href)
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+</body>
+</html>

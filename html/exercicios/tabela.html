@@ -1,0 +1,67 @@
+<table>
+    <caption>Produtos</caption>
+    <thead>
+        <!-- thead é o cabeçalho de uma tabela -->
+        <tr> <!-- tablerow -->
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+            <!-- cada th representa o cabeçalho de uma coluna -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>iPad</td>
+            <td>3289,00</td>
+            <td>5</td>
+            <td>16.445,00</td>
+           <!--  td significa tabledata ou dados da tabela. -->
+        </tr>
+        <tr>
+            <td>Samsung S9</td>
+            <td>2649,00</td>
+            <td>8</td>
+            <td>21.192,00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Total</td>
+            <!-- colspan serve para que a nova coluna ocupe o espaço de 3 -->
+            <!-- para ocupar outra linha, basta usar rowspan="2" e ele irá ocupar
+            o espaço de 2 linhas -->
+            <td>37.637,00</td>
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 10px;
+    }
+    thead tr{
+        border-bottom: solid 3px #444;
+    }
+    tbody tr:hover {
+        background-color: #dedede;
+        /* o comando hover é 'passar por cima', então aplica uma cor quando
+        o mouse passar por cima de uma linha */
+    }
+    tfoot {
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+    }
+</style>
+
+<!-- O atalho para comentar uma linha ou área selecionada diretamente é 
+apertando Ctrl + K e depois Ctrl + u, e para descomentar basta seguir o 
+mesmo procedimento.
+
+outras opções são: 
+Alt + Shift + A 
+Ctrl + ; -->

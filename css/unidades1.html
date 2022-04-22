@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unidades #01</title>
+    <style>
+        .unidades-absolutas {
+            position: absolute;
+            font-size: 40px;
+            padding: 20px;
+            border: solid 5px #222;
+            margin: 30px;
+            width: 4cm; /* pouco usado */
+            height: 20mm;   /* pouco usado */
+            top: 150px;
+            left: 200px;
+            /* nas unidades absolutas, o designer não irá sofrer alterações
+            com a mudança no tamanho da aba do browser, enquanto que na 
+            relativa irá. */
+        }
+
+        .unidades-relativas {
+            position: absolute;
+            font-size: 4em; 
+            /* basicamente pega a referência de fonte mais próxima e multiplica
+            por 4x */
+            padding: 5%;
+            border: solid 1vw #222;
+            /* aqui ele faz em relação a 1/100 da viewport ou seja,
+            se eu aumentar o tamanho do browser ou diminuir, o tamanho
+            da bordar irá diminuir junto. */
+            margin: 0.8%;
+            width: 20vw;
+            height: 15vh; 
+            /* 15/100 da altura da viewport  */
+            bottom: 5%;
+            right: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="unidades-absolutas">Opa!</div>
+    <div class="unidades-relativas">Epa!</div>
+</body>
+
+</html>
