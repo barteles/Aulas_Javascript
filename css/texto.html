@@ -11,10 +11,80 @@
             margin: 0;
         }
 
+        hmtl {
+            font-size: 28px;
+        }
+
         body {
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        div {
+            font-size: 100px;
+
+        }
+
+        p {
+            /* valores padrões */
+            font-size: 1em;
+            font-size: 100%; /* aqui deve-se tomar cuidado pois 
+            essas duas fontes podem variar conforme outros atributos
+            forem utilizados */
+            font-size:  16px; /* tamanho padrão */
+            font-size: 12pt; /* tamanho padrão = 16px */
+
+            /* unidades absolutas */
+            font-size: 100px;
+            /* tamanho do pixel é relativo */
+            font-size: 72pt;    /* pontos */
+            font-size: 11in; /* polegadas */
+
+            /* unidades relativas */
+            
+            font-size: 2.2em; /* essa pega como ponto a unidade do atributo
+            mais próximo, nesse caso seria da DIV pai */
+
+            font-size: 2.2rem; /* irá pegar a referência RAIZ, nesse
+            caso será 16px padrão do html, porém se eu modificar o 
+            tamanho da fonte no html ele irá utlizar essa nova fonte
+            como referência  */
+            
+            font-family: monospace;
+            font-family: Georgia, Serif;
+            font-family: Verdana, sans-serif;
+            font-family: 'Indie Flower', cursive;
+
+            font-weight: 100;
+            font-style: italic;
+            text-transform: uppercase;
+            /* text-decoration: overline underline line-through; */
+            word-spacing: 10px;
+            letter-spacing: 20px;
+            line-height: 2.5em;
+            text-align: center;
+        }
+
+        .botao {
+            font-size: 28px;
+            text-decoration: none; /* tira o underline do link */
+            padding: 10px 30px;
+            border-radius: 25px;
+
+        }
+
+        .destaque {
+            color: #fff;
+            background: tomato;
+            box-shadow: 2px 2px 1px 1px #000;
+            
+        }
+
+        .destaque:active{
+            box-shadow: none;   /* quando for pressionado ele irá
+            dar a aparencia de tal ação, desaparecendo o sombreamento
+            do botão */
         }
     </style>
 </head>

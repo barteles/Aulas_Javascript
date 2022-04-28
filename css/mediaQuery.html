@@ -12,6 +12,20 @@
             border: solid 5px;
             display: none;
         }
+
+        @media (max-width: 600px) {
+            .muito-pequeno {display: block;}
+        }
+
+        @media (max-widht: 1000px), (orientation: portrait) {
+            .pequeno-retrato { display: block; }
+            /* nesse caso, a ',' age como se fosse um OU, ou seja,
+            largura máxima de 1000px OU orientação retrato */
+        }
+
+        @media (min-width: 500px) and (max-width: 1000px) {
+            .intervalo { display: block; }
+        }
     </style>
 </head>
 <body>
